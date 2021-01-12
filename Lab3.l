@@ -13,8 +13,9 @@ ID[_A-Za-z][A-Za-z_0-9]*
 
 	enum TOKENS{
     		IF = 1, ELSE, OPEN_F, CLOSE_F, OPEN, CLOSE, FOR, WHILE, DO, TYPE,
-    		ID, SPACE, VAL, SEM, PLMIN, TIMDIV, EQ, END, INCDEC, OPEN_CUR, CLOSE_CUR, LOGICAL, NEQ, SPEC_EQ, COMMA, STRING_LITERAL, PRINTF
-	} ;
+    		ID, SPACE, VAL, SEM, PLMIN, TIMDIV, EQ, END, INCDEC, OPEN_CUR, CLOSE_CUR,
+			LOGICAL, NEQ, SPEC_EQ, COMMA, STRING_LITERAL, PRINTF, RET, CONTINUE, BREAK
+	};
 
 	typedef struct TOKEN_ {
    	 	enum TOKENS type;
@@ -35,6 +36,7 @@ ID[_A-Za-z][A-Za-z_0-9]*
 
 "int"|"float"|"char"|"double"		{tokens[next++] = createToken(TYPE);} 
 "<"|">"|">="|"<="				{tokens[next++] = createToken(LOGICAL);} 
+"return"				{tokens[next++] = createToken(RET);} 
 "!"				{tokens[next++] = createToken(NEQ);} 
 \"([^\\\"]|\\.)*\"  {tokens[next++] = createToken(STRING_LITERAL);}
 "+="|"-="|"*="|"/="				{tokens[next++] = createToken(SPEC_EQ);} 
@@ -42,6 +44,8 @@ ID[_A-Za-z][A-Za-z_0-9]*
 ")"				{tokens[next++] = createToken(CLOSE);} 
 "{"				{tokens[next++] = createToken(OPEN_F);} 
 "}"				{tokens[next++] = createToken(CLOSE_F);} 
+"continue"				{tokens[next++] = createToken(CONTINUE);} 
+"break"				{tokens[next++] = createToken(BREAK);} 
 "if"				{tokens[next++] = createToken(IF);} 
 "else"				{tokens[next++] = createToken(ELSE);} 
 "for"				{tokens[next++] = createToken(FOR);} 

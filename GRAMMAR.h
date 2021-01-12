@@ -13,6 +13,8 @@ int statement();
 int block();
 
 int loop();
+int forLoop();
+int whileLoop();
 int loopStatement();
 int forDec();
 
@@ -49,6 +51,12 @@ int I6();
 
 int funcCall();
 int printfCall();
+
+int jumpExpr();
+int jumpExpr1();
+int jumpExpr2();
+int jumpExpr3();
+
 
 int param();
 

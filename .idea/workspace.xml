@@ -9,7 +9,14 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0bdeefe4-6351-4abe-a695-25b69900c1b6" name="Default Changelist" comment="" />
+    <list default="true" id="0bdeefe4-6351-4abe-a695-25b69900c1b6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GRAMMAR.c" beforeDir="false" afterPath="$PROJECT_DIR$/GRAMMAR.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GRAMMAR.h" beforeDir="false" afterPath="$PROJECT_DIR$/GRAMMAR.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab3.l" beforeDir="false" afterPath="$PROJECT_DIR$/Lab3.l" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lex.yy.c" beforeDir="false" afterPath="$PROJECT_DIR$/lex.yy.c" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,7 +26,11 @@
     <option name="formatViaClangd" value="false" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1mFok6vAKkjhvgwQFIUCijRPcF9" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -27,6 +38,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="cf.first.check.clang-format" value="false" />
   </component>
@@ -54,7 +66,9 @@
       <workItem from="1609530205749" duration="12000" />
       <workItem from="1609572082329" duration="3118000" />
       <workItem from="1610368991689" duration="395000" />
-      <workItem from="1610373979002" duration="16745000" />
+      <workItem from="1610373979002" duration="16878000" />
+      <workItem from="1610464325143" duration="2052000" />
+      <workItem from="1610466429927" duration="3702000" />
     </task>
     <servers />
   </component>

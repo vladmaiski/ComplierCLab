@@ -35,11 +35,41 @@ int block() {
         return 1;
 
     tokens = save;
+    if (funcCall() && block())
+        return 1;
+
+    tokens = save;
     if (funcCall())
         return 1;
 
     tokens = save;
+    if (jumpExpr() && block())
+        return 1;
+
+    tokens = save;
+    if (jumpExpr())
+        return 1;
+
+    tokens = save;
     return 0;
+}
+
+int jumpExpr() {
+    TOKEN *save = tokens;
+    return ((tokens = save, jumpExpr1()) || (tokens = save, jumpExpr2())
+            || (tokens = save, jumpExpr3()));
+}
+
+int jumpExpr1() {
+    return term(RET) && term(VAL) && term(SEM);
+}
+
+int jumpExpr2() {
+    return term(CONTINUE) && term(SEM);
+}
+
+int jumpExpr3() {
+    return term(BREAK) && term(SEM);
 }
 
 int funcCall() {
@@ -74,6 +104,15 @@ int printfCall() {
 }
 
 int loop() {
+    TOKEN *save = tokens;
+    return ((tokens = save, forLoop()) || (tokens = save, whileLoop()));
+}
+
+int whileLoop() {
+    return (term(WHILE) && term(OPEN) && logicalExpr() && term(CLOSE) && statement());
+}
+
+int forLoop() {
     return (term(FOR) && term(OPEN) && forDec() && term(CLOSE) && statement());
 }
 
